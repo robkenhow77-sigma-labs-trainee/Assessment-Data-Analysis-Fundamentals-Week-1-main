@@ -1,5 +1,5 @@
 {
-    "passing_tests": "?",
+    "passing_tests": 5,
     "total_tests": 30,
-    "total_score_percent": "?"
+    "total_score_percent": 0.17
 }
