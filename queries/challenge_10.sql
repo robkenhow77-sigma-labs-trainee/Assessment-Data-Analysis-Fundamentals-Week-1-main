@@ -6,7 +6,9 @@
 with a as (
 select category_name, product_name, units_on_order from products
 left join categories using (category_id)
+), b as (
+select category_name, rank() over(partition by category_name order by units_on_order desc, product_name) as rank, product_name, units_on_order from a 
+order by category_name, rank desc, product_name desc
 )
-select category_name, product_name, rank() over(partition by category_name) from a
-order by rank desc;
-
+select category_name, product_name from b 
+where rank = 3;
