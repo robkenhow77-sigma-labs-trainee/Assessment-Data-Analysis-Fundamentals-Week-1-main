@@ -7,8 +7,9 @@
 
 -- Results should be sorted alphabetically by supplier and category.
 
-select category_name, avg(unit_price) from products
+select company_name,  category_name, round(avg(unit_price)) from products
+left join suppliers using (supplier_id)
 left join categories using (category_id)
-where category_name ilike '%m%'
-group by category_name;
-
+where category_name ilike '%m%' 
+group by company_name, category_name
+order by company_name, category_name;

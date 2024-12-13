@@ -2,7 +2,7 @@
 
 -- Results should be ordered alphabetically by category_name and product_name
 
-select category_name, product from products
+select category_name, product_name from products
 left join categories using (category_id)
 where product_name like 'S%'
 order by category_name, product_name;

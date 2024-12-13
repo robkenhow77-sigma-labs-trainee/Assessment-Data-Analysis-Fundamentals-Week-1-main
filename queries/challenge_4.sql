@@ -4,4 +4,5 @@
 
 select category_name, count(products) as num_products from products
 left join categories using (category_id) 
-group by category_name;
+group by category_name
+order by num_products desc, category_name desc;
