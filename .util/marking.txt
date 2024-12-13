@@ -5,4 +5,4 @@ collected 30 items
 
 test_queries.py ..F.FFFFFF..F..FFFFF.FFFFFFFFF                           [100%]
 
-======================== 22 failed, 8 passed in 28.24s =========================
+======================== 22 failed, 8 passed in 32.00s =========================
